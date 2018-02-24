@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="br">
+	<head>
+		
+		<title>CALCULADORA SGOLDS MHF</title>
+		
+		<!--bibliotecas -->
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		
+		<script>$(document).ready(function(){
+	
+	$("#calcular").click(function executar(){
+		 var valordig = document.getElementById("Valordig").value;
+		 var fator;
+		 var pacote;
+		 var vip;
+		 var promovalidate = "05/03/2018";
+		 var itensbrinde;
+		 var creditos;
+		 var hfgolds;
+		 if (valordig >= 10){
+		 if (valordig >= 10 && valordig <= 29){
+			 fator = 12;
+			 pacote = "1 - x" + fator;
+			 vip= "30 dias Vip Master";
+			 itensbrinde="Kit Full Add Ancient(a escolha) ";
+			 creditos="1000";
+			 hfgolds="0";
+			 }
+		 
+		 if (valordig >= 30 && valordig <= 69){
+			fator = 13;
+			pacote = "2 - x"+fator;
+			vip = "60 dias Vip Master";
+			 itensbrinde="Shild ou Arma Relikia v4 Full/Add Roxo + Harmony ou Socket, Kit Full/Add Roxo Ancient (a escolha), Asa lvl3 Full/Add (a escolha) ";
+			 creditos="2000";
+			 hfgolds="60";
+			 }
+			
+		 if (valordig >= 70 && valordig <= 99){
+			fator = 15;
+			pacote = "3 - x" + fator;
+			vip = "90 dias Vip Master";
+			 itensbrinde="Kit Full/Add Roxo Ancient (a escolha), Set Poseidon ou Evil Hades Full/Add + Harmony, Arma V4 Full/Add Harmony + Socket(a escolha), Shild Relikia v4 Full/Add + Harmony, Fenrir Gold Full Socket + Harmony";
+			 creditos="4000";
+			 hfgolds="160";
+			 }
+			
+		  if (valordig >= 100 && valordig <= 149){
+			 fator = 16;
+			pacote = "4 - x"+ fator;
+			vip = "30 dias Vip Premium";
+			 itensbrinde="Kit Full/Add Roxo Ancient (a escolha), Set Poseidon ou Evil Hades Full/Add + Harmony, Arma Poseidom ou Evil Hades Full/Add + Socket, Shild Poseidom ou Evil Hades Full/Add + Harmony,  Arma Relikia V5 Full/Add Roxo + Socket (a escolha) ou Shild Relikia V5 Full/Add Roxo + Harmony (a escolha), Fenrir Gold Full Socket, Pet Dragon Fire Full Socket";
+			 creditos="6000";
+			 hfgolds="220";
+			 }
+			 
+		  if (valordig >= 150 && valordig <= 199){
+			 fator = 15;
+			pacote = "5 - x15";
+			vip = "40 dias Vip Premium";
+			 itensbrinde="Kit Full/Add Roxo Ancient (a escolha), Kit War Full/Add Roxo Ancient, Asa War Full/Add Ancient + Socket, Set Poseidon ou Evil Hades Full/Add + Harmony, Set Dragon Supreme ou Shaman Supreme Full/Add + Harmony, Arma Relikia V5 Full/Add Roxo + Socket (a escolha), Shild Relikia V5 Full/Add Roxo + Harmony (a escolha), Fenrir Gold Full Socket, Pet Dragon Fire Full Socket";
+			  creditos="8000";
+			 hfgolds="360";
+			 }
+			
+		  if (valordig >= 200 && valordig <= 299){
+			 fator = 18;
+			pacote = "6 - x"+ fator;
+			vip = "50 dias Vip Premium";
+			 itensbrinde="Kit Full/Add Roxo Ancient (a escolha), Kit War Full/Add Roxo Ancient, Asa War Full/Add Ancient + Socket, Set Poseidon ou Evil Hades Full/Add + Harmony, Set Dragon Supreme ou Shaman Supreme Full/Add + Harmony, Arma Relikia V5 Full/Add Roxo + Socket (a escolha), Shild Relikia V5 Full/Add Roxo + Harmony (a escolha), Set Relikia V5 Full/Add + Hamrony, Fenrir Gold Full Socket, Pet Dragon Fire Full Socket";
+			 creditos="10000";
+			 hfgolds="460";
+		  }
+		  
+			 
+		   if (valordig >= 300){
+			fator = 19;
+		   pacote= "7 - x" + fator;
+		   vip = "60 dias Vip Premium";
+		   itensbrinde="All Demon Lord(Arma + Shild + Set), Asa Lv4 Full/Add + Socket, Kit Full/Add Roxo Ancient (a escolha), Kit War Full/Add Roxo Ancient, Asa War Full/Add Ancient + Socket, Set Poseidon ou Evil Hades Full/Add + Harmony, Set Dragon Supreme Full/Add + Harmony, Set Shaman Supreme Full/Add + Harmony, Arma Relikia V5 Full/Add Roxo + Socket (a escolha), Shild Relikia V5 Full/Add Roxo + Harmony (a escolha), Set Relikia V5 Full/Add + Hamrony, Fenrir Gold Full Socket, Pet Dragon Fire Full Socket";
+			 creditos="12000";
+			 hfgolds="640";
+		   }
+		   var sgolds = (valordig * fator);
+		   var mensagem = ("Depositando R$" + valordig + " - Pacote " + pacote + "<br /><br /><span class='mensagem'>Receberá:<br /> </span><span class='mensagem'>Solgds: </span>" + sgolds  + "<br /><span class='mensagem'>Hfgolds: </span>" + hfgolds + "<br /><span class='mensagem'>Créditos: </span>" + creditos + "<br /><span class='mensagem'>Vip: </span>" + vip + "!!<br />" + "<span class='mensagem'>Itens Brinde: </span>" + itensbrinde + "<br /><span class='mensagem'>Promoção valida até: </span>" + promovalidate);
+		document.getElementById("Valordig").value=' ';
+		var div = document.getElementById("resp");
+		div.innerHTML = mensagem;
+		   
+	
+	}
+	});
+	
+	
+	
+});
+ function SomenteNumero(e){
+    var tecla=(window.event)?event.keyCode:e.which; 
+    if((tecla>47 && tecla<58)) return true;
+    else{
+	if (tecla==8 || tecla==0 )return true;
+	else  return false;
+	}
+}</script>
+		
+		<style>
+		#container {
+    width: 900px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-image: url(https://mmohuts.com/wp-content/uploads/2016/02/MU-Online-Season-11-Trailer.png);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#principal {
+    text-align: center;
+    color: #fff;
+    font-family: cursive;
+    height: 600px;
+    background-color: #000000a1;
+    padding-top: 15px;
+}
+#resp{
+	margin-top:40px;
+}
+#header{
+	
+}
+.lnkforum{
+	float:left;
+	position:relative;
+	left:14%;
+}
+.lnkshop{
+	float:right;
+	position:relative;
+	left:-14%;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #0c1119;
+}
+#footer {
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+	background-image:url(http://jquery.com/jquery-wp-content/themes/jquery/images/dark-grey-tile.png);
+}
+
+.edit {
+    text-align: center;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+	color:black;
+}
+
+.btn-success {
+    border-radius: 8px;
+    border: none;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+}
+.edit{
+	text-align:center;
+	
+}
+.mensagem{
+	text-decoration:underline;
+	text-shadow: #fff 1px 1px 1px;
+}
+
+.desc-icon {
+    background-color: #369FCF;
+    border-radius: 69px;
+    box-sizing: border-box;
+    color: #fff;
+    float: left;
+    font-size: 27px!important;
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 15px;
+    margin-top: -20px;
+    padding: 12px 0;
+    text-align: center;
+    width: 50px;
+   display: inline-block;
+    font-family: awesome;
+}
+
+a {
+    color: #e9f0f5;
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: 28px;
+}
+a:visited{
+    color: #e9f0f5;
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: 28px;
+}
+a:hover{
+    color: #e9f0f5;
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: 28px;
+	cursor:pointer;
+}
+		</style>
+		
+		<meta charset=UTF-8>
+	</head>
+	
+	<body> 
+	
+		<div id = "container">
+		
+			<div id="header"></div>
+			<div id = "content"></div>
+				<div id = "principal">
+				<h3> SAIBA QUANTOS SGOLDS E QUAIS BRINDES RECEBERÁ COM SEU DEPÓSITO</h3>
+					
+				
+				<br />
+				<input onkeypress="return SomenteNumero(event)" type="text" placeholder="R$0" class="edit" title="DIGITE O VALOR DE SEU DEPÓSITO!" alt="Campo do Valor" id="Valordig" /><br /><br />
+				
+				<button class="btn-success" alt="Botão calcular" id="calcular" title="CALCULAR"><i class="fas fa-check"></i>Calcular</button>
+				<div id="resp"></div>
+				</div>
+				<div id = "left"></div>
+			<div id = "footer">
+			<a href="http://forum.hellfiremu.net/" target="_blank" class="lnkforum"><i class="fas fa-life-ring"></i> Fórum</a>
+
+			<a href="http://hellfiremu.net/index4/" target="_blank" class="lnksite"><i class="fas fa-flag"></i> Site</a>
+			
+			<a href="http://www.hellfiremu.net/ShoppingsSuper/" target="_blank" class="lnkshop"><i class="fas fa-map"></i> Shop</a>
+			
+			
+			
+			<br />	<br />	
+			<span style="color: #f91f1f; font-size: 15px; font-weight: bold; text-decoration: underline;">HellFIreMu - MuHellFire - Sua melhor escolha! </span><br /> Ultima atualização:13/02/2018 <br />Desenvolvido por: <strong>Castiel</strong>
+			
+			</div>
+		</div>
+		
+	</body>
+	
+	
+	
+</html>
